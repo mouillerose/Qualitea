@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*Header*/
+
+header {
+    position : absolute;
+    top: 0;
+    left:0;
+    background-color: #9cbc8f;
+    width: 100%;
+    /*height: 10%;*/
+    z-index: 1;
+}
+
+h2 {
+    color:#427a51;
+    padding-left: 30%;
+}
+
+
+/*Menu de gauche*/
+
+
+#cote {
+    background-color: #d3e8cb;
+    position: fixed;
+    left:0;
+    height: 100%;
+    width: 15%;
+    z-index: 0;
+    float:left;
+    overflow:hidden;
+}
+
+#ul_side{
+    list-style-image: url('../img/puce.png');
+    list-style-position: inside;
+    left:0;
+    padding: 0;
+    margin-left: 0;
+    margin-top: 200px;
+    list-style-type: none;
+    width: 100%;
+    background-color: #d3e8cb;
+    float:left;
+    
+}
+
+#ul_side li a {
+    color: #427a51;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+#bouton_accueil {
+    margin-bottom: 30px;
+}
+#bouton_contact {
+    margin-top: 30px;
+}
+
+/*Menu du haut*/
+
+#ul_top {
+    list-style-type: none;
+    margin:0;
+    padding-left:3%;
+    display: flex;
+    flex-direction: row;
+    /*display:block;
+    float: left;*/
+    overflow: hidden;
+    background-color: #9cbc8f;
+    
+}
+
+#ul_top li{
+    /*display: inline;
+    float:left;*/
+    display: flex;
+    height: 100px;
+}
+
+#ul_top li a {
+    color: white;
+    text-align: center;
+    padding: 36px 50px; /* à revoir avec des pourcentages, problème pas réglé*/
+    text-decoration: none;
+}
+
+#ul_top li a:hover {
+    background-color:#b2cda8;
+} 
+
+/*Partie centrale*/
+
+
+#milieu {
+    position:static;
+    background-color: white;
+    z-index: -1;
+    float :left;
+    width:85%;
+    height:100%;
+    padding-left:15%;/*chercher une meilleure solution pour les mettre cote à cote*/
+    padding-top:10%;
+    overflow:auto;
+}
+
+
+article {
+    background-color: #fafff8;
+
+
+}
+
+img {
+    float:left;
+}
+
+#image_accueil {
+    padding-left:25%;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: #b2cfa6;
+    position:absolute;
+    margin: 0;
+    padding: 0;
+    bottom:0;
+    left:0;
+    z-index: 1;
+    width:100%;
+    height:5%;
+}
+
+#bas {
+    color:white;
+    font-size: 12px;
+    text-align: center;
+
+}
+
