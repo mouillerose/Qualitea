@@ -146,3 +146,8 @@ table{
     padding: 10px;
     border:1px solid #b2cfa6;
     }
+
+.error {
+  color: #FF0000;
+    }
+      
