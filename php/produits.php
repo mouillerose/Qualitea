@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php $cat=$_GET['categorie'];?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,46 +29,21 @@
               <th class="stock"><p id="categorie_table">Stock</p></th>
             </tr>
           </thead>
-        <tr>
-            <td> <?php $x=$_SESSION["categorie"][0][0];echo "<img id=\"article\" src=\"../img/$x\" alt=\"Thé vert Citron\">"; ?></td>
-            <td> <?php echo $_SESSION["categorie"][1][0]; ?></td>
-            <td> <?php echo $_SESSION["categorie"][2][0]; ?></td>
-            <td> <?php echo $_SESSION["categorie"][3][0]; ?></td>
-            <td><button onclick="moins('article1','quantite1')">-</button><input id="quantite1" class="qualite" type=texte readonly value=0 ><button onclick="plus('article1','quantite1')">+</button><br> <div class="panier"> <input  class="commande" type=button value="Ajouter au panier" > </div></td>
-            <td id="article1" class="stock"><?php echo $_SESSION["categorie"][4][0]; ?></td>
-        </tr>
-        <tr>
-            <td><?php $x=$_SESSION["categorie"][0][1];echo "<img id=\"article\" src=\"../img/$x\" alt=\"Thé vert Citron\">"; ?></td>
-            <td><?php echo $_SESSION["categorie"][1][1]; ?></td>
-            <td><?php echo $_SESSION["categorie"][2][1]; ?></td>
-            <td><?php echo $_SESSION["categorie"][3][1]; ?></td>
-            <td><button onclick="moins('article2','quantite2')">-</button><input id="quantite2" class="qualite" type=texte readonly value=0 ><button onclick="plus('article2','quantite2')">+</button><br> <div class="panier"> <input  class="commande" type=button value="Ajouter au panier" > </div></td>
-            <td id="article2" class="stock"><?php echo $_SESSION["categorie"][4][1]; ?></td>
-        </tr>
-        <tr>
-            <td><?php $x=$_SESSION["categorie"][0][2];echo "<img id=\"article\" src=\"../img/$x\" alt=\"Thé vert Citron\">"; ?></td>
-            <td><?php echo $_SESSION["categorie"][1][2]; ?></td>
-            <td><?php echo $_SESSION["categorie"][2][2]; ?></td>
-            <td><?php echo $_SESSION["categorie"][3][2]; ?></td>
-            <td><button onclick="moins('article3','quantite3')">-</button><input id="quantite3" class="qualite" type=texte readonly value=0 ><button onclick="plus('article3','quantite3')">+</button><br> <div class="panier">  <input  class="commande" type=button value="Ajouter au panier" > </div></td>
-            <td id="article3" class="stock"><?php echo $_SESSION["categorie"][4][2]; ?></td>
-        </tr>
-        <tr>
-            <td><?php $x=$_SESSION["categorie"][0][3];echo "<img id=\"article\" src=\"../img/$x\" alt=\"Thé vert Citron\">"; ?></td>
-            <td><?php echo $_SESSION["categorie"][1][3]; ?></td>
-            <td><?php echo $_SESSION["categorie"][2][3]; ?></td>
-            <td><?php echo $_SESSION["categorie"][3][3]; ?></td>
-            <td><button onclick="moins('article4','quantite4')">-</button><input id="quantite4" class="qualite" type=texte readonly value=0 ><button onclick="plus('article4','quantite4')">+</button> <br> <div class="panier"> <input  class="commande" type=button value="Ajouter au panier" > </div></td>
-            <td id="article4" class="stock"><?php echo $_SESSION["categorie"][4][3]; ?></td>
-        </tr>
-        <tr>
-            <td><?php $x=$_SESSION["categorie"][0][4];echo "<img id=\"article\" src=\"../img/$x\" alt=\"Thé vert Citron\">"; ?></td>
-            <td><?php echo $_SESSION["categorie"][1][4]; ?></td>
-            <td><?php echo $_SESSION["categorie"][2][4]; ?></td>
-            <td><?php echo $_SESSION["categorie"][3][4]; ?></td>
-            <td><button onclick="moins('article5','quantite5')">-</button><input id="quantite5" class="qualite" type=texte readonly value=0 ><button onclick="plus('article5','quantite5')">+</button> <br> <div class="panier"> <input  class="commande" type=button value="Ajouter au panier" > </div></td>
-            <td id="article5" class="stock"><?php echo $_SESSION["categorie"][4][4]; ?></td>
-        </tr>
+        
+        <?php 
+        $taille=count($_SESSION[$cat]);
+        for ($i=0;$i<$taille-2;$i++){
+            $x=$_SESSION[$cat][$i]['image'];
+            echo "<tr>
+            <td> <img id=\"article\" src=\"../img/$x\" alt=\"Thé vert Citron\"> </td>
+            <td> " . $_SESSION[$cat][$i]['ref'] . "</td>
+            <td> " . $_SESSION[$cat][$i]['nom'] . "</td>
+            <td> " . $_SESSION[$cat][$i]['prix']. "</td>
+            <td><button onclick=\"moins('article1','quantite1')\">-</button><input id=\"quantite1\" class=\"qualite\" type=texte style=\"width: 150px;\" readonly value=0 ><button onclick=\"plus('article1','quantite1')\">+</button><br> <div class=\"panier\"> <input  class=\"commande\" type=button value=\"Ajouter au panier\" > </div></td>
+            <td id=\"article1\" class=\"stock\"> ". $_SESSION[$cat][$i]['stock'] . "</td>
+            </tr>";
+        }
+        ?>
         
     </table>
    

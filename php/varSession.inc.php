@@ -3,27 +3,20 @@
 
 //Thé vert
 
-$tv_images=array("the_vert_citron.jpg","the_vert_fruitsrouges.jpg","the_vert_jasmin.jpg","the_vert_matcha.jpg","the_vert_sencha.jpg");
+$tv01 = array('image'=>"the_vert_citron.jpg",'nom'=>"Thé vert citron / 100g",'ref'=>"tv01",'prix'=>"prix",'stock'=>10);
+$tv02 = array('image'=>"the_vert_fruitsrouges.jpg",'nom'=>"Thé vert Fruits Rouges / 100g",'ref'=>"tv02",'prix'=>"prix",'stock'=>10);
+$tv03 = array('image'=>"the_vert_jasmin.jpg",'nom'=>"Thé vert Jasmin / 100 g",'ref'=>"tv03",'prix'=>"prix",'stock'=>10);
+$tv04 = array('image'=>"the_vert_matcha.jpg",'nom'=>"Thé vert Matcha / 100g",'ref'=>"tv04",'prix'=>"prix",'stock'=>10);
+$tv05 = array('image'=>"the_vert_sencha.jpg",'nom'=>"Thé vert Sencha / 100g",'ref'=>"tv05",'prix'=>"prix",'stock'=>10);
 
-$tv_noms=array("Thé vert citron / 100g","Thé vert fruits rouges / 100g","Thé vert Jasmin / 100g","Thé vert Matcha / 100g","Thé vert Sencha / 100g");
-
-$tv_ref=array("tv01","tv02","tv03","tv04","tv05");
-
-$tv_prix=array("prix","prix","prix","prix","prix");
-
-$tv_stock=array(10,10,10,10,10);
 
 //Thé noir
 
-$tn_images=array("the_noir_assam.jpg","the_noir_darjeeling.jpg","the_noir_earlgrey.jpg","the_noir_fruitsdesbois.jpg","the_noir_rose.jpg");
-
-$tn_noms=array("Thé noir Assam/ 100g","Thé noir Darjeeling / 100g","Thé noir Earl Grey / 100g","Thé noir aux fruits des bois / 100g","Thé noir à la Rose/ 100g");
-
-$tn_ref=array("tn01","tn02","tn03","tn04","tn05");
-
-$tn_prix=array("prix","prix","prix","prix","prix");
-
-$tn_stock=array(10,10,10,10,10);
+$tn01 = array('image'=>"the_noir_assam.jpg",'nom'=>"Thé noir Assam / 100g",'ref'=>"tn01",'prix'=>"prix",'stock'=>10);
+$tn02 = array('image'=>"the_noir_darjeeling.jpg",'nom'=>"Thé noir Darjeeling / 100g",'ref'=>"tn02",'prix'=>"prix",'stock'=>10);
+$tn03 = array('image'=>"the_noir_earlgrey.jpg",'nom'=>"Thé noir Earl Grey / 100 g",'ref'=>"tn03",'prix'=>"prix",'stock'=>10);
+$tn04 = array('image'=>"the_noir_fruitsdesbois.jpg",'nom'=>"Thé noir Fruits des bois / 100g",'ref'=>"tn04",'prix'=>"prix",'stock'=>10);
+$tn05 = array('image'=>"the_noir_rose.jpg",'nom'=>"Thé noir à la Rose / 100g",'ref'=>"tn05",'prix'=>"prix",'stock'=>10);
 
 //Infusion
 
@@ -37,22 +30,32 @@ $if_prix=array("prix","prix","prix","prix","prix");
 
 $if_stock=array(10,10,10,10,10);
 
-//on créé les variables de sessions utilisées dans l'urldecode
 
-$the_vert=array($tv_images,$tv_ref,$tv_noms,$tv_prix,$tv_stock);
-$the_noir=array($tn_images,$tn_ref,$tn_noms,$tn_prix,$tn_stock);
-$infusion=array($if_images,$if_ref,$if_noms,$if_prix,$if_stock);
+$if01 = array('image'=>"inf_boutonsrose.jpg",'nom'=>"Infusion aux boutons de Rose / 100g",'ref'=>"if01",'prix'=>"prix",'stock'=>10);
+$if02 = array('image'=>"inf_camomille.jpg",'nom'=>"Infusion Camomille / 100g",'ref'=>"if02",'prix'=>"prix",'stock'=>10);
+$if03 = array('image'=>"inf_gingembrecitronmiel.jpg",'nom'=>"Infusion Gingembre, Citron, Miel / 100 g",'ref'=>"if03",'prix'=>"prix",'stock'=>10);
+$if04 = array('image'=>"inf_menthereglisse.jpg",'nom'=>"Infusion Menthe & Réglisse / 100g",'ref'=>"if04",'prix'=>"prix",'stock'=>10);
+$if05 = array('image'=>"inf_noel.jpg",'nom'=>"Infusion de Noël / 100g",'ref'=>"if05",'prix'=>"prix",'stock'=>10);
+
+
+//on créé les variables de sessions utilisées dans l'url de code
+
+$_SESSION['the_vert']=array($tv01,$tv02,$tv03,$tv04,$tv05, 'the_vert', "Thé Vert");
+$_SESSION['the_noir']=array($tn01,$tn02,$tn03,$tn04,$tn05, 'the_noir', "Thé Noir");
+$_SESSION['infusion']=array($if01,$if02,$if03,$if04,$if05,'infusion', "Infusion");
 
 //Choix des variables de session en fonction de l'url
 
-$cat=$_GET['categorie'];
-if ($cat == "the_vert") {
-    $_SESSION["categorie"]=$the_vert;
-  }
-elseif ($cat== "the_noir"){
-    $_SESSION["categorie"]=$the_noir;
-}
-elseif ($cat=="infusion"){
-    $_SESSION["categorie"]=$infusion;
-};
-?>
+
+$_SESSION['categorie']=array($_SESSION['the_vert'],$_SESSION['the_noir'],$_SESSION['infusion']);
+
+/*foreach($data->utilisateur as $user){
+       // echo "pseudo :".$user->username."<br>\n";
+       // echo "mdp :".$user->password."<br>\n";
+        if ( ($user->username==$_POST["pseudo"]) && ($user->password==$_POST["password"]) ){
+            $boleen = true;
+            break;
+        }
+    }
+$data = simplexml_load_file('utilisateur.xml');*/
+
