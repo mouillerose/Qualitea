@@ -1,5 +1,7 @@
 <?php session_start(); ?>
 
+<?php include "./php/varSession.inc.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
