@@ -1,6 +1,12 @@
-<?php session_start(); ?>
+<?php session_start(); 
 
-<?php include "./php/varSession.inc.php"; ?>
+if (!(isset($_SESSION['logged']))){
+    $_SESSION['logged']=false;
+}
+if (!(isset($_SESSION['panier']))){
+    $_SESSION['panier']=array();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +18,8 @@
 </head>
 <body>
 
-<?php include 'php/header_index.php'; ?>
-<?php include 'php/side_menu_index.php'; ?>
+<?php include 'php/header.php'; ?>
+<?php include 'php/side_menu.php'; ?>
 
 <section id="milieu">
         <img src="img/image_accueil.png" alt="Rien de mieux qu'un thé de qualité" id="image_accueil">

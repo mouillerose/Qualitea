@@ -1,10 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<tv_noms category='the_vert'>
-    <1></1>
-    <2></2>
-    <3></3>
-    <4></4>
-    <5></5>
-</tv_noms>
+<boutique>
 
+    <!--////////////////////////////////////////////////////////////-->
+
+    <categorie url='the_vert' titre='Thé Vert'>
+
+        <article>
+            <image>the_vert_citron.jpg</image>
+            <nom>Thé vert Citron / 100g</nom>
+            <ref>tv01</ref>
+            <prix>5.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>the_vert_fruitsrouges.jpg</image>
+            <nom>Thé vert Fruits Rouges / 100g</nom>
+            <ref>tv02</ref>
+            <prix>5.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>the_vert_jasmin.jpg</image>
+            <nom>Thé vert Jasmin / 100g</nom>
+            <ref>tv03</ref>
+            <prix>5.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>the_vert_matcha.jpg</image>
+            <nom>Thé vert Matcha / 100g</nom>
+            <ref>tv04</ref>
+            <prix>7.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>the_vert_sencha.jpg</image>
+            <nom>Thé vert Sencha / 100g</nom>
+            <ref>tv05</ref>
+            <prix>6.95</prix>
+            <stock>100</stock>
+        </article>
+
+    </categorie>
+
+    <!--////////////////////////////////////////////////////////////-->
+
+    <categorie url='the_noir' titre='Thé Noir'>
+
+        <article>
+            <image>the_noir_assam.jpg</image>
+            <nom>Thé noir Assam / 100g</nom>
+            <ref>tn01</ref>
+            <prix>6.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>the_noir_darjeeling.jpg</image>
+            <nom>Thé noir Darjeeling / 100g</nom>
+            <ref>tn02</ref>
+            <prix>6.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>the_noir_earlgrey.jpg</image>
+            <nom>Thé noir Earl Grey / 100g</nom>
+            <ref>tn03</ref>
+            <prix>5.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>the_noir_fruitsdesbois.jpg</image>
+            <nom>Thé noir Fruits des bois / 100g</nom>
+            <ref>tn04</ref>
+            <prix>5.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>the_noir_rose.jpg</image>
+            <nom>Thé noir à la Rose / 100g</nom>
+            <ref>tn05</ref>
+            <prix>6.95</prix>
+            <stock>100</stock>
+        </article>
+
+    </categorie>
+
+    <!--////////////////////////////////////////////////////////////-->
+
+    <categorie url='infusion' titre='Infusion'>
+
+        <article>
+            <image>inf_boutonsrose.jpg</image>
+            <nom>Infusion de boutons de Rose / 100g</nom>
+            <ref>if01</ref>
+            <prix>7.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>inf_camomille.jpg</image>
+            <nom>Infusion de Camomille / 100g</nom>
+            <ref>if02</ref>
+            <prix>5.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>inf_gingembrecitronmiel.jpg</image>
+            <nom>Infusion Gingembre, Citron, Miel / 100g</nom>
+            <ref>if03</ref>
+            <prix>6.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>inf_menthereglisse.jpg</image>
+            <nom>Infusion Menthe Réglisse / 100g</nom>
+            <ref>if04</ref>
+            <prix>6.95</prix>
+            <stock>100</stock>
+        </article>
+
+        <article>
+            <image>inf_noel.jpg</image>
+            <nom>Infusion de Noël / 100g</nom>
+            <ref>tn05</ref>
+            <prix>5.95</prix>
+            <stock>100</stock>
+        </article>
+
+    </categorie>
+
+    <!--////////////////////////////////////////////////////////////-->
+
+</boutique>
